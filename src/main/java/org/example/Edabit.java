@@ -5,8 +5,7 @@ import java.util.regex.Pattern;
 
 public class Edabit {
     private final String text;
-    Pattern pattern;
-    Matcher matcher;
+
 
     // TODO: Создайте функцию, которая принимает строку и изменяет слово amazing на not amazing.
     //  Верните строку без каких-либо изменений, если слово edabit является частью строки.
@@ -16,8 +15,8 @@ public class Edabit {
 
     public String replacement() {
         if (!this.text.toLowerCase().contains("edabit")) {
-
-            return "ццццц";
+            this.text.replace("is", "is not ");
+            return this.text;
         }
         return this.text;
     }
